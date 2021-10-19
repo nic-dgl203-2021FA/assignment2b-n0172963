@@ -252,3 +252,16 @@ span {
 span:nth-child(2n) {
     color:#8677c9;
 }
+
+/* cell 7 */
+.item7 {
+    color: white;
+    width: 80px;
+    background: rgb(49, 211, 223);
+    transition: width 2s;
+    transition-timing-function: cubic-bezier(1.0, 1.0, 1.0, 1.0);
+}
+  
+.item7:hover {
+    width: 400px;
+}
