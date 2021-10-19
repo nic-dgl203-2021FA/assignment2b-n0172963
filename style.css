@@ -265,3 +265,38 @@ span:nth-child(2n) {
 .item7:hover {
     width: 400px;
 }
+
+/* cell 4 Create two clouds that continuously move across the screen at different speeds */
+
+.item4{
+    text-align: left;
+}
+  
+/* set duration and type animation for image */
+.cloud01 {
+    animation: float 30s linear infinite;
+}
+.cloud02 {
+    animation: float 35s 2s linear infinite backwards;
+}
+  
+/* distance of start point and end point*/
+@keyframes float {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(2000px);
+    }
+}
+  
+.item4 .wrap {
+    overflow: hidden;
+    position:relative;
+}
+  
+/* speed of two clouds */
+.cloud02 {top:500px;}
+.cloud01 {top:200px;}
+  
+.cloud {width:150px;}
