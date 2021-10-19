@@ -1,6 +1,11 @@
 h1{
     text-align: center;
-  }
+}
+
+body {
+    display:flex; flex-direction:column; justify-content:center;
+    min-height:80vh;
+}
   
   /* create column and row with grid */
   
@@ -41,7 +46,7 @@ h1{
 
 }
 
-  /* cell 1 transition button */ 
+/* cell 1 transition button */ 
 /* config button */
 button {
     border: 3px solid #eed76f;
@@ -68,4 +73,31 @@ button:hover {
   transform: scale(1.6);/* zoom button */
   background:#f54d41;
   color: #f5f5f5;
+}
+
+/* cell 2 animation word decrease size */
+
+/* change size item */
+@keyframes scaleIn {
+    0% {transform: scale(1.5);} /*increase size when start*/
+    100% {transform:scale(0.5);} /* decrease size until end*/
+}
+  
+/* use font Fira Sans*/
+.item2 h2 {
+    font-family: "Fira Sans", sans-serif;
+    color: #DCF2B0;
+    text-shadow: 3px 3px 0px #59C3C3;
+    
+    animation-name: scaleIn;
+    animation-fill-mode: backwards;
+    /* repeat animation */
+    animation: scaleIn 3s infinite;
+}
+  
+.item2 .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
