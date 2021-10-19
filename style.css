@@ -101,3 +101,30 @@ button:hover {
     justify-content: center;
     height: 100vh;
 }
+
+/* cell 3 animation image */
+
+.item3 {
+    text-align: left;
+}
+/* set size image */
+img{
+    height: 150px;
+    width: 100px;
+}
+  
+/* set animetion for image have class name is circle after hover */
+.circle:hover {
+    animation-name: move;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count:3;
+    animation-direction: alternate;
+}
+  
+@keyframes move {
+    100% {
+      /* distance of start point and end point */
+      transform: translateX(350%);
+    }
+}
