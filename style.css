@@ -1,3 +1,4 @@
+/* Global */
 h1{
     text-align: center;
 }
@@ -7,7 +8,7 @@ body {
     min-height:80vh;
 }
   
-  /* create column and row with grid */
+/* Create column and row with grid. */
   
 .item {
     color: black;
@@ -20,33 +21,33 @@ body {
     border: 2px solid orange;
 }
   
-/* large screen */
-@media screen and (min-width: 769px) {
-  
+/* Large screen. */
+@media screen and (min-width: 790px) {
+
     .container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
         grid-gap: 1rem;
     }
 
     .item4 {
         grid-column: 1 / span 3;
     }
-  
+
 }
-  
-/* small screen */
-@media screen and (max-width: 768px) {
+
+/* Small screen. */
+@media screen and (max-width: 789px) {
     .container {
         display: grid;
         grid-template-columns: 1fr ;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
     }
 
 }
 
-/* cell 1 transition button */ 
+/* Cell 1 transition button. */  
 /* config button */
 button {
     border: 3px solid #eed76f;
@@ -75,7 +76,7 @@ button:hover {
   color: #f5f5f5;
 }
 
-/* cell 2 animation word decrease size */
+/* Cell 2 animation word decrease size. */
 
 /* change size item */
 @keyframes scaleIn {
@@ -102,7 +103,7 @@ button:hover {
     height: 100vh;
 }
 
-/* cell 3 animation image */
+/* Cell 3 animation image. */
 
 .item3 {
     text-align: left;
@@ -129,7 +130,7 @@ img{
     }
 }
 
-/* cell 5 auto typing */
+/* Cell 5 word auto typing. */
 
 .item5 h2 {
   animation: typing 3s steps(180) infinite,/* time duration and speed typing (typing 180 characters in 3s) */
@@ -161,7 +162,7 @@ img{
   }
 }
 
-/* cell 6 a word that flips up and / or down */
+/* Cell 6 a word that flips up and / or down. */
 
 .item6 h2{
     font-size: 40px;
@@ -189,7 +190,7 @@ img{
 }
 
 
-/* set time show animation for span +0.2s for next span */
+/* set time show animation per span, +0.2s for next span */
   
 span {
     animation: flipUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) both,
@@ -253,12 +254,13 @@ span:nth-child(2n) {
     color:#8677c9;
 }
 
-/* cell 7 */
+/* Cell 7 animation increase width of cell by cubic-bezier timing. */
 .item7 {
     color: white;
     width: 80px;
     background: rgb(49, 211, 223);
     transition: width 2s;
+    /* https://cubic-bezier.com/#.16,.79,.86,.42 */
     transition-timing-function: cubic-bezier(1.0, 1.0, 1.0, 1.0);
 }
   
@@ -266,18 +268,18 @@ span:nth-child(2n) {
     width: 400px;
 }
 
-/* cell 4 Create two clouds that continuously move across the screen at different speeds */
+/* Cell 4 create two clouds that continuously move across the screen at different speeds. */
 
 .item4{
     text-align: left;
 }
   
-/* set duration and type animation for image */
+/* set duration (speed) and type animation for image */
 .cloud01 {
-    animation: float 30s linear infinite;
+    animation: float 20s linear infinite;
 }
 .cloud02 {
-    animation: float 35s 2s linear infinite backwards;
+    animation: float 15s 2s linear infinite backwards;
 }
   
 /* distance of start point and end point*/
@@ -286,17 +288,17 @@ span:nth-child(2n) {
       transform: translateX(0px);
     }
     100% {
-      transform: translateX(2000px);
+      transform: translateX(1000px);
     }
 }
   
 .item4 .wrap {
+    display:grid;
     overflow: hidden;
     position:relative;
 }
   
-/* speed of two clouds */
-.cloud02 {top:500px;}
-.cloud01 {top:200px;}
+.cloud02 {top:76px;}
+.cloud01 {top:30px;}
   
 .cloud {width:150px;}
