@@ -1,3 +1,52 @@
+/*
+
+List font :
+- Italianno
+- Roboto
+- Fira Sans
+
+List color:
+- black
+- white
+- orange
+- #eed76f
+- #f09595
+- #f54d41
+- #f5f5f5
+- #DCF2B0
+- #59C3C3
+- #433F55
+- #CE2D4F
+- #db71bb
+- #8677c9
+- rgb(49, 211, 223)
+
+List content:
+
+- Global
+
+- Create column and row with grid.
+
+- Large screen.
+
+- Small screen.
+
+- Cell 1 transition button.
+
+- Cell 2 animation word decrease size.
+
+- Cell 3 animation image.
+
+- Cell 4 create two clouds that continuously move across the screen at different speeds.
+
+- Cell 5 word auto typing.
+
+- Cell 6 a word that flips up and / or down.
+
+- Cell 7 animation increase width of cell by cubic-bezier timing.
+
+*/
+
 /* Global */
 h1{
     text-align: center;
@@ -114,7 +163,7 @@ img{
     width: 100px;
 }
   
-/* set animetion for image have class name is circle after hover */
+/* set animation for image have class name is circle when hover */
 .circle:hover {
     animation-name: move;
     animation-duration: 3s;
@@ -261,11 +310,11 @@ span:nth-child(2n) {
     background: rgb(49, 211, 223);
     transition: width 2s;
     /* https://cubic-bezier.com/#.16,.79,.86,.42 */
-    transition-timing-function: cubic-bezier(1.0, 1.0, 1.0, 1.0);
+    transition-timing-function: cubic-bezier(.16,.79,.86,.42);
 }
   
 .item7:hover {
-    width: 400px;
+    width: 600px;
 }
 
 /* Cell 4 create two clouds that continuously move across the screen at different speeds. */
