@@ -163,7 +163,7 @@ img{
     width: 100px;
 }
   
-/* set animation for image have class name is circle when hover */
+/* set animation for image have circle class name when hover */
 .circle:hover {
     animation-name: move;
     animation-duration: 3s;

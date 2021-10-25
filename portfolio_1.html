@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <title>DGL-203 Webpage Porfolio</title>
+  </head>
+  <body>
+    <main>
+      <!-- ***********************  ABOUT / PROFILE  *********************** -->
+      <header>
+      <div class="content-wrap" id="profile">
+          <h1>Lusa Vu</h1>
+          <h2>Communication Design Student</h2>
+
+          <p>Hi! I'm Lusa. I'm a student from NIC, majored in Communication Design. Here's where I'm working on my porfolio for DGL-203 course.</p>
+      </div>
+      <!-- Menu Top Bar -->
+      <div class="topnav">
+        <a href="#profile" class="active">Profile</a>
+        <a href="#project">Projects</a>
+        <a href="#work-experience">Work Experience</a> 
+        <a href="#education">Education</a> 
+        <a href="#contact">Contact</a>
+        <!-- add button modal Popup in menu -->
+        <a href="#popup1">Pop up</a>
+      </div>
+      <!-- Menu Droppdown default hidden -->
+      <div class="nav-responsive">
+        <a href="#profile" class="active">Profile</a>
+        <a href="#project">Projects</a>
+        <a href="#work-experience">Work Experience</a> 
+        <a href="#education">Education</a> 
+        <a href="#contact">Contact</a>
+        <!-- Add button modal Popup in menu -->
+        <a href="#popup1">Pop up</a>
+      </div>
+        <div id="popup1" class="overlay">
+          <div class="popup">
+            <h2>Here I am</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+              This is modal popup without js. Source code : <a href="https://codepen.io/imprakash/pen/GgNMXO">codepen.io</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
+      <section class="projects" id="project">
+        <div class="content-wrap divider">
+          <h2>Featured Projects</h2>
+
+          <!-- Project 1 -->
+          <section class="project-item">
+            <img class="main"src="images/Whale.jpeg">
+            <h3>The Whale Island</h3>
+            <p>The Island Whale is my last critique drawing created in FIN-110 on Fall term 2020. The basic concept is about the greatness of nature and how human lives are bonded with it. The project was inspired by the Indigenous origin stories about a turtle island, which also stands for deeply-held respect for the environment.</p>
+            <a class="btn" href="https://www.lynda.com/Christina-Truong/7842227-1.html">View artwork</a>
+          </section>
+
+          <!-- Project 2 -->
+          <section class="project-item">
+            <img class="main"src="images/Postcard.jpg">
+            <h3>Osaka Sushi Re-Branding</h3>
+            <p>A re-branding design for a local business in Courtenay. Created in DGL -202 on Fall term 2020. Includes a stationery package and packaging supplies.</p>
+            <a class="btn" href="http://christinatruong.com/projects/women-and-tech-redesign.html" target="_blank">View package</a>
+          </section>
+
+          <!-- Project 3 -->
+          <section class="project-item">
+            <img src="images/Board.png" alt="website thumbnail">
+            <h3>PAWSOME Pet Finder App</h3>
+            <p>PAWSOME is a pet finder UI - UX design created in DGL-111 on Winter term 2021. The design is aimed to create an user interface and user experience that works best for people who is looking for a furry companion. View app <a href="https://xd.adobe.com/view/cb64f335-693c-47cc-a74f-f51bd46a42de-9e37/?fullscreen">prototype</a> for more details.</p>
+            <a class="btn" href="http://thewireipsum.com" target="_blank">View PAWSOME</a>
+          </section>
+
+          <!-- Project 4 -->
+          <section class="project-item">
+            <img src="images/Cover.jpg" alt="website thumbnail">
+            <h3>Japan GUIDE</h3>
+            <p>A cover design for magazine about traveling, cuisine, beauty and everything you could think about Japan. Created in IMG-112 on Winter term 2019.</p>
+            <a class="btn" href="http://thewireipsum.com" target="_blank">View magazine</a>
+          </section>
+
+        </div>
+      </section>
+
+      <!-- ***********************  WORK EXPERIENCE  *********************** -->
+      <section class="work-experience item-details" id="work-experience">
+        <div class="content-wrap divider">
+          <h2>Work Experience</h2>
+
+          <!-- Job 1 -->
+          <section class="job-item">
+            <div class="job-details">
+              <h3>Waitress - Hostess</h3>
+              <p>Osaka Sushii</p>
+              <p>Courtenay, BC, Canada</p>
+              <p>October 2019 - August 2021</p>
+            </div>
+            <div class="job-summary">
+              <p>Waitressing and Hosting. Cleaning the dining space, bathrooms and kitchen. Serving food and drinks, taking phone orders.</p>
+            </div>
+          </section>
+
+          <!-- Job 2 -->
+          <section class="job-item">
+            <div class="job-details">
+              <h3>Japanese Teacher</h3>
+              <p>Subaru Academy</p>
+              <p>Ho Chi Minh, Vietnam</p>
+              <p>August 2017 - April 2018</p>
+            </div>
+            <div class="job-summary">
+              <p>Teaching high school graduates Japanese and preparing them for studying aboard in Japan. </p>
+            </div>
+          </section>
+
+        </div>
+      </section>
+
+      <!-- ******************  EDUCATION & CERTIFICATIONS ****************** -->
+      <section class="education" id="education">
+        <div class="content-wrap">
+          <h2>Education</h2>
+
+          <!-- Copy this whole <section> block to add more schools. -->
+          <section>
+            <h3>Hong Bang International University</h3>
+            <p>Ho Chi Minh City, VietNam</p>
+            <p>September 2013 - May 2017</p>
+          </section>
+          <!-- End of School block. -->
+
+          <section>
+            <h3>North Island College</h3>
+            <p>Courtenay, BC, Canada</p>
+            <p>May 2018 - Present</p>
+          </section>
+        </div>
+      </section>
+
+      <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
+      <footer>
+        <div class="content-wrap" id="contact">
+          <h2>Let's Keep in Touch!</h2>
+
+          <!-- Social media and contact links. Add or remove any networks. -->
+          <ul class="contact-list">
+            <li><a href="#popup1">nvu@northislandcollege.ca</a></li>
+            <li><a href="https://twitter.com/home">Twitter</a></li>
+            <li><a href="https://www.instagram.com/lusa.rio/">Instagram</a></li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
