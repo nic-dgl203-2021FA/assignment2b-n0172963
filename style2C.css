@@ -1,0 +1,71 @@
+.Layer {
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    animation: beat 3s linear infinite ,fade 0.25s reverse both, spin 3s linear infinite;
+  }
+
+  @keyframes beat {
+    0% {
+      transform: scale(1);
+      fill: red,
+    }
+    50% {
+      transform: scale(2);
+      fill: blue;
+    }
+    100% {
+      transform: scale(1);
+      fill: green;
+    }
+  }
+
+  @keyframes spin {
+    0%{
+      transform: scaleX(1);
+    }
+    25%{
+      transform: scaleX(2);
+    }
+    50% {
+      transform: scaleX(3);
+      fill: blue;
+    }
+    75%{
+      transform: scaleX(2);
+    }
+    100% { 
+        transform:scaleX(1);
+    } 
+  }
+
+  @keyframes fade {
+    0% {
+      opacity:1;
+   }
+    
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  
+  /* other styles */
+
+  h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wrap {
+    width:15vw;
+    display: flex;
+  }
+  
+  .child {
+    /* Center vertically and horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
