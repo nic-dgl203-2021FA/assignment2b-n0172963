@@ -1,0 +1,793 @@
+/*------------------------------- menu -----------------------
+  - Global
+
+  - Responsive screen
+
+  - Navbar menu
+
+  - Motion sample page
+
+  - Animation svg page
+
+  - Profile page
+
+/*
+
+/* --------------------------------------------------- Global -----------------------------------------*/
+
+header {
+  background: #2F3061;
+  color: #F7FFF7;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #343434;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+img {
+  width: 300px;
+}
+a {
+  color: #FFE66D;
+}
+a:hover {
+  text-decoration: none;
+}
+h1, h2 {
+  font-family: 'Ephesis', cursive;
+  font-weight: 400;
+  margin: 0;
+}
+h1 {
+  font-size: 100px;
+  line-height: 1;
+  text-align: center;
+}
+h2 {
+  font-size: 45px;
+}
+
+.content-wrap {
+  max-width: 800px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+.item-details h3 {
+  margin-bottom: 0;
+}
+.item-details h3 + p {
+  font-style: italic;
+}
+.item-details h3 ~ p {
+  margin: 0;
+}
+.divider > section {
+  overflow: hidden;
+  border-bottom: 1px dashed #343434;
+  padding: 25px 0;
+}
+.divider > section:last-of-type {
+  border: none;
+}
+
+
+  
+/* Create column and row with grid. */
+  
+.item {
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 2px solid orange;
+}
+
+
+
+/*---------------------------------------------- Responsive screen ---------------------------------- */
+
+/* Large screen. */
+@media screen and (min-width: 769px) {
+  
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-gap: 1rem;
+    }
+
+    .item4 {
+        grid-column: 1 / span 3;
+    }
+
+    header, footer {
+      text-align: center;
+    }
+  
+    .project-item img {
+      float: left;
+      margin-right: 20px;
+    }
+  
+    .job-item {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      column-gap: 20px;
+    }
+  
+    .contact-list {
+      display: flex;
+      justify-content: center;
+    }
+    .contact-list a {
+      padding: 15px;
+    }
+}
+
+/* Small screen. */
+@media screen and (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    h1 {
+      font-size: 75px;
+      line-height: 0.9;
+      margin-bottom: 20px;
+    }
+    h2 {
+      line-height: 1;
+    }
+
+}
+
+/*---------------------------------------- Navbar menu ------------------------------- */
+
+  /* list color:
+    - #00bff3
+    - #fff
+    - #f0c808
+    - #ff583d
+    - black
+
+
+  */
+
+  .hamburger, .close {
+    font-size: 2rem;
+    color: #00bff3;
+  }
+
+  nav {
+    background-image: url('https://vivaldi.com/wp-content/uploads/2018/02/tab-bar-bg-gradient.jpg');
+    position: absolute;
+    z-index: 1000;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    /* positioning the close button and navbar */
+    display:flex;
+    justify-content: space-between;
+    text-align: center;
+    /* animate slide up and down */
+    transform: translateY(-100%);
+    transition: transform 0.2s ease;
+  }
+  /* logo */
+  .logo img{
+    height: 50px;
+    width: auto;
+  }
+
+  .logo{
+    flex-basis: 100px;
+    text-align: center;
+  }
+
+  .logo a:hover{
+    background-image: none;
+    background-color: transparent;
+  }
+  /* element in nav */
+  nav:target{
+    transform: translateY(0);
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  nav a{
+    padding: 0.5rem;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  nav a:focus{
+      background-color: #f0c808;
+      color: black;
+  }
+
+  nav a:hover{
+    color: #1aadb8;
+    background-color: #ffffff;
+  }
+
+  .active{
+    color:#ff583d;
+    background-color: #c5e5ed;
+  }
+
+  .close:hover{
+    background-image:none;
+    background-color: transparent;
+  }
+
+
+  @media (min-width: 769px){
+    nav{
+      border-top: 3px solid #00bff3;
+      border-bottom: 3px solid #00bff3;
+      position: static;
+      height: auto;
+      transform: translateY(0);
+      background-image: url('https://vivaldi.com/wp-content/uploads/2018/02/tab-bar-bg-gradient.jpg');
+    }
+    .hamburger, .close{
+      display: none;
+    }
+    nav ul{
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .space{
+      flex-grow: 4;
+    }
+  }
+
+/*--------------------------------------- Motion sample page -----------------------------------*/
+
+/*List font :
+- Italianno
+- Roboto
+- Fira Sans
+
+List color:
+- black
+- white
+- orange
+- #eed76f
+- #f09595
+- #f54d41
+- #f5f5f5
+- #DCF2B0
+- #59C3C3
+- #433F55
+- #CE2D4F
+- #db71bb
+- #8677c9
+- rgb(49, 211, 223)
+
+List content:
+
+- Global
+
+- Create column and row with grid.
+
+- Large screen.
+
+- Small screen.
+
+- Cell 1 transition button.
+
+- Cell 2 animation word decrease size.
+
+- Cell 3 animation image.
+
+- Cell 4 create two clouds that continuously move across the screen at different speeds.
+
+- Cell 5 word auto typing.
+
+- Cell 6 a word that flips up and / or down.
+
+- Cell 7 animation increase width of cell by cubic-bezier timing.
+
+*/
+
+/* Cell 1 transition button. */  
+
+/* config button */
+button {
+    border: 3px solid #eed76f;
+    margin: 30px auto 0;
+    padding: 14px 15px;
+    color: #fff;
+    background:#f09595;
+    width:200px;
+    font-size:1rem;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius:20px
+}
+
+/* properties transtition : background, transform, border-radius */
+button {
+  transition: background .3s ease-in,
+              transform .2s .1s ease-out;
+              border-radius: .3s ease-in;
+}
+
+button:hover {
+  transform: scale(1.6);/* zoom button */
+  background:#f54d41;
+  color: #f5f5f5;
+}
+
+/* Cell 2 animation word decrease size. */
+
+/* change size item */
+@keyframes scaleIn {
+    0% {transform: scale(1.5);} /*increase size when start*/
+    100% {transform:scale(0.5);} /* decrease size until end*/
+}
+  
+/* use font Fira Sans*/
+.item2 h3 {
+    font-family: "Fira Sans", sans-serif;
+    color: #DCF2B0;
+    text-shadow: 3px 3px 0px #59C3C3;
+    
+    animation-name: scaleIn;
+    animation-fill-mode: backwards;
+    /* repeat animation */
+    animation: scaleIn 3s infinite;
+}
+  
+.item2 .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Cell 3 animation image. */
+
+.item3 {
+    text-align: left;
+}
+/* set size image */
+.item3 img{
+    height: 150px;
+    width: 100px;
+}
+  
+/* set animation for image have class name is circle when hover */
+.circle:hover {
+    animation-name: move;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count:3;
+    animation-direction: alternate;
+}
+  
+@keyframes move {
+    100% {
+      /* distance of start point and end point */
+      transform: translateX(400%);
+    }
+}
+
+/* Cell 5 word auto typing. */
+
+.item5 h3 {
+  animation: typing 3s steps(180) infinite,/* time duration and speed typing (typing 180 characters in 3s) */
+  blinking 0.5s steps(1) infinite;
+  color: #433F55;
+  font-family: 'Italianno', cursive;
+  overflow: hidden; 
+  border-right: .15em solid #CE2D4F; 
+  margin-inline: auto; /* let content in center*/
+  white-space: nowrap; 
+  letter-spacing: .15em; 
+}
+
+@keyframes typing {
+  0% {
+    width:0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blinking {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #CE2D4F;
+  }
+}
+
+/* Cell 6 a word that flips up and / or down. */
+
+.item6 h2{
+    font-size: 40px;
+}
+
+/* set range for anmation up and down */
+@keyframes flipUp {
+    from {transform:rotateX(90deg);}
+    to {transform:rotateX(0deg);}
+}
+  
+@keyframes flipDown {
+    to {transform:rotateX(-180deg);}
+}
+  
+@keyframes flick {
+    0%, 100% {
+      transform: rotateX(-180deg) rotateZ(0deg);
+      animation-timing-function: cubic-bezier(0.64, 0, 0.78, 0);
+    }
+    50% {
+      transform: rotateX(-180deg) rotateZ(10deg);
+      animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+}
+
+
+/* set time show animation per span, +0.2s for next span */
+  
+span {
+    animation: flipUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) both,
+               flipDown 1s cubic-bezier(0.34, 1.56, 0.64, 1) 2.75s forwards;
+    transform-origin: 50% 70%;
+}
+  
+span:nth-child(2) {
+    animation-delay: 0.2s, 2.95s;
+}
+  
+span:nth-child(3) {
+    animation-delay: 0.4s, 3.15s;
+}
+  
+span:nth-child(4) {
+    animation-delay: 0.6s, 3.35s;
+}
+  
+span:nth-child(5) {
+    animation-delay:0.8s, 3.55s;
+}
+  
+  span:nth-child(6) {
+    animation-delay:1s, 3.75s;
+  }
+  
+span:nth-child(7) {
+    animation-delay:1.2s, 3.95s;
+}
+  
+span:nth-child(8) {
+    animation-delay:1.4s, 4.15s;
+}
+  
+span:nth-child(9) {
+    animation-delay:1.6s, 4.35s;
+}
+  
+span:nth-child(10) {
+    animation-delay:1.8s, 4.55s;
+}
+  
+span:nth-child(11) {
+    animation-delay:2s, 4.75s;
+}
+  
+span:nth-child(12) {
+    animation: flipUp 1s 2.2s cubic-bezier(0.34, 1.56, 0.64, 1)  both, 
+    flipDown 1s 4.95s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+    flick .95s 5.15s linear forwards;
+}
+  
+span {
+    font-family: 'Roboto', sans-serif;
+    display:inline-block;
+    color:#db71bb;
+}
+  
+span:nth-child(2n) {
+    color:#8677c9;
+}
+
+/* Cell 7 animation increase width of cell by cubic-bezier timing. */
+.item7 {
+    color: white;
+    width: 80px;
+    background: rgb(49, 211, 223);
+    transition: width 2s;
+    /* https://cubic-bezier.com/#.16,.79,.86,.42 */
+    transition-timing-function: cubic-bezier(.16,.79,.86,.42);
+}
+  
+.item7:hover {
+    width: 600px;
+}
+
+/* Cell 4 create two clouds that continuously move across the screen at different speeds. */
+
+.item4{
+    text-align: left;
+}
+  
+/* set duration (speed) and type animation for image */
+.cloud01 {
+    animation: float 20s linear infinite;
+}
+.cloud02 {
+    animation: float 15s 2s linear infinite backwards;
+}
+  
+/* distance of start point and end point*/
+@keyframes float {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(1000px);
+    }
+}
+  
+.item4 .cloud-wrap {
+    display:grid;
+    overflow: hidden;
+    position:relative;
+}
+  
+.cloud02 {top:76px;}
+.cloud01 {top:30px;}
+  
+.cloud {width:150px;}
+
+/*--------------------------------------------------- Animation svg page ---------------------------------------*/
+.Layer {
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    animation: beat 3s linear infinite ,fade 0.25s reverse both, spin 3s linear infinite;
+  }
+
+  @keyframes beat {
+    0% {
+      transform: scale(1);
+      fill: red,
+    }
+    50% {
+      transform: scale(2);
+      fill: blue;
+    }
+    100% {
+      transform: scale(1);
+      fill: green;
+    }
+  }
+
+  @keyframes spin {
+    0%{
+      transform: scaleX(1);
+    }
+    25%{
+      transform: scaleX(2);
+    }
+    50% {
+      transform: scaleX(3);
+      fill: blue;
+    }
+    75%{
+      transform: scaleX(2);
+    }
+    100% { 
+        transform:scaleX(1);
+    } 
+  }
+
+  @keyframes fade {
+    0% {
+      opacity:1;
+   }
+    
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  
+  /* other styles */
+  .wrap {
+    width:15vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .child {
+    height: 300px;
+    position: relative;
+    left: 100%;
+    margin: auto;
+  }
+
+  /*-------------------------------------------- Profile page ---------------------------------*/
+
+  /*
+    COLOR PALETTE
+    https://coolors.co/f7fff7-343434-2f3061-ffe66d-a1c6d7
+    #F7FFF7 - almost white
+    #343434 - dark gray - almost back
+    #2F3061 - blue dark
+    #FFE66d - yellow
+    #A1C6D7 - blue light
+*/
+
+
+
+/* Projects
+------------------------------------*/
+.projects {
+  background: #F7FFF7;
+}
+.projects a {
+  color: #2F3061;
+}
+.projects .btn {
+  background: #2F3061;
+  color: #F7FFF7;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.projects .btn:hover {
+  background: rgba(47,48,97,80%);
+}
+.project-item h3 {
+  margin-top: 0;
+}
+
+
+
+/* Work Experience
+------------------------------------*/
+.work-experience {
+  background: #A1C6D7;
+}
+
+
+
+/* Education
+------------------------------------*/
+.education {
+  background-image: url(../images/3.jpg);
+  background-position: top right;
+  background-size: cover;
+  padding-bottom: 100px;
+}
+.education p {
+  width: 60%;
+}
+
+
+/* Contact Info
+------------------------------------*/
+footer {
+  background: #343434;
+  color: #F7FFF7;
+}
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+}
+.contact-list a {
+  padding: 5px;
+  display: inline-block;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* popup */
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+  color:black;
+}
+
+.popup a {
+  color:blue;
+}
