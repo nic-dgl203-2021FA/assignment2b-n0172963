@@ -51,11 +51,6 @@ List content:
 h1{
     text-align: center;
 }
-
-body {
-    display:flex; flex-direction:column; justify-content:center;
-    min-height:80vh;
-}
   
 /* Create column and row with grid. */
   
@@ -71,7 +66,7 @@ body {
 }
   
 /* Large screen. */
-@media screen and (min-width: 790px) {
+@media screen and (min-width: 769px) {
 
     .container {
         display: grid;
@@ -87,7 +82,7 @@ body {
 }
 
 /* Small screen. */
-@media screen and (max-width: 789px) {
+@media screen and (max-width: 768px) {
     .container {
         display: grid;
         grid-template-columns: 1fr ;
@@ -163,7 +158,7 @@ img{
     width: 100px;
 }
   
-/* set animation for image have circle class name when hover */
+/* set animation for image have class name is circle when hover */
 .circle:hover {
     animation-name: move;
     animation-duration: 3s;
@@ -351,3 +346,111 @@ span:nth-child(2n) {
 .cloud01 {top:30px;}
   
 .cloud {width:150px;}
+
+  /* navbar menu */
+
+  .hamburger, .close {
+    font-size: 2rem;
+    color: #00bff3;
+  }
+
+  nav {
+    background-color: #eee;
+    position: absolute;
+    z-index: 1000;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    /* positioning the close button and navbar */
+    display:flex;
+    justify-content: space-between;
+    text-align: center;
+    /* animate slide up and down */
+    transform: translateY(-100%);
+    transition: transform 0.2s ease;
+  }
+
+  li img{
+    height: 50px;
+  }
+  
+  nav:target{
+    transform: translateY(0);
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  nav a{
+    padding: 0.5rem;
+    display: block;
+    color: #00bff3;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  nav a:focus{
+      background-color: #f0c808;
+      color: black;
+  }
+
+  nav a:hover{
+    color: #ff583d;
+    background-color: #f0c808;
+  }
+
+  .active{
+    color:#ff583d;
+    background-color: #c5e5ed;
+  }
+
+  .close:hover{
+    background-image:none;
+    background-color: transparent;
+  }
+
+  .logo{
+    flex-basis: 100px;
+    text-align: center;
+  }
+
+  .logo a:hover{
+    background-image: none;
+    background-color: transparent;
+  }
+
+  @media (min-width: 768px){
+    header{
+      margin: 1rem auto;
+    }
+    nav{
+      border-top: 3px solid #00bff3;
+      border-bottom: 3px solid #00bff3;
+      padding: 0;
+      position: static;
+      height: auto;
+      transform: translateY(0);
+    }
+    .hamburger, .close{
+      display: none;
+    }
+    nav ul{
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .space{
+      flex-grow: 4;
+    }
+  }
